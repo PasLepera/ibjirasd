@@ -3,7 +3,7 @@ LABEL maintainer="Pasquale Lepera <pasquale@ibuildings.it>"
 
 ENV JIRA_SD_VERSION 3.13.0
 ENV JIRA_HOME     	/var/atlassian/application-data/jirasd
-ENV JIRA_INSTALL  	/opt/atlassian/jirasd
+ENV JIRA_INSTALL  	/opt/atlassian/jira
 ENV JIRA_USER	  	jira
 ENV JIRA_INSTALLER	atlassian-servicedesk-$JIRA_SD_VERSION-x64.bin
 
@@ -42,4 +42,4 @@ EXPOSE 8080
 
 ENTRYPOINT ["/entrypoint.sh"]
 
-CMD ["/usr/local/atlassian/jirasd/bin/start-jira.sh", "-fg"]
+CMD ["/usr/local/atlassian/jira/bin/start-jira.sh", "-fg"]
